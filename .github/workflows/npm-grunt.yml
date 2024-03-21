@@ -38,4 +38,4 @@ jobs:
         npm install
     - name: Run server
       run: |
-        echo: "Auto test success, server on ${{ secrets.PORT }}"
+        echo "Auto test success, server on ${{ secrets.PORT }}"
