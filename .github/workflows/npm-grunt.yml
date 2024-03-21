@@ -23,7 +23,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Make envfile
       run: |
-        echo ${{secrets.PORT}}
+        echo "${{secrets.PORT}}"
     - name: Build dependencies
       run: |
         npm install
