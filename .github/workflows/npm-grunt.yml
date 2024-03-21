@@ -21,7 +21,19 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-
+    - name: Make envfile
+      uses: SpicyPizza/create-envfile@v2.0
+      with:
+        PORT: ${{ secrets.PORT }}
+        DB_URL: ${{ secrets.DB_URL }}
+        DB_PASSWORD: ${{ secrets. DB_PASSWORD }}
+        USER_TOKEN_SECRET: ${{ secrets.USER_TOKEN_SECRET }}
+        USER_REFRESH_TOKEN_SECRET: ${{ secrets.USER_REFRESH_TOKEN_SECRET }}
+        YTB_API_URL: ${{ secrets.YTB_API_URL }}
+        YTB_API_KEY: ${{ secrets.YTB_API_KEY }}
+        file_name: .env
+        fail_on_empty: false
+        sort_keys: false
     - name: Build dependencies
       run: |
         npm install
