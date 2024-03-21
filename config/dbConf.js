@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
-const { DB_URL, DB_PASSWORD } = require('./envConf');
+const { DB_URL } = require('./envConf');
 
-const sequelize = new Sequelize(DB_URL, { password: DB_PASSWORD });
+const sequelize = new Sequelize(DB_URL);
 
 sequelize.options.logging = false;
 
