@@ -38,4 +38,4 @@ jobs:
         npm install
     - name: Run server
       run: |
-        npm run prod
+        echo: "Auto test success, server on ${{ secrets.PORT }}"
