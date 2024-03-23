@@ -17,7 +17,7 @@ app.use(requestLogger);
 app.use(userRouter);
 app.use(PlayListRouter);
 app.use(videoRouter);
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
   return res.send('Hello from server. DcnV');
 });
 
